@@ -2,24 +2,25 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactGridLayout from 'react-grid-layout';
 import QuestionFront from '../question/QuestionFront';
+import QuestionBack from '../question/QuestionBack';
+import * as Mock from '../../../mockdata/mocklayout';
+import './QuetionGrid.css';
 
 class QuestionGrid extends Component {
 
     printQuestions(questionList) {
         return questionList.map((q) => (
-            <div key={q.id}><QuestionFront question={q}/></div>));
+            <div className="question-front" key={q.id}><QuestionBack question={q}/></div>));
     }
 
     render() {
         let { questionList, size } = this.props;
 
-        const layout = [
-            {i: "a", x: 2, y: 0, w: 1, h: 1, static: true},
-            {i: "b", x: 1, y: 1, w: 1, h: 1, static: true}
-        ]
+        const layout = Mock.mockLayout;
 
         return (
-            <ReactGridLayout className="layout" cols={size} rowHeight={100} width={800}>
+            <ReactGridLayout className="layout" layout={layout}
+                             cols={size} rowHeight={120} width={1800}>
                 { this.printQuestions(questionList) }
             </ReactGridLayout>
         );

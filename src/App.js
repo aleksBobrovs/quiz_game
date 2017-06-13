@@ -1,28 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import QuestionGrid from "./components/questionComponents/grid/QuestionGrid";
+import * as Mock from "./mockdata/mockQuestionList";
 
 class App extends Component {
   render() {
 
-      let questionsArr = [
-          {
-              question : "Hey, what's up?",
-              points: 80,
-              event: "event 1",
-              id: "a"
-          },
-          {
-              question : "Hey, who you are?",
-              points: 100,
-              event: "event 2",
-              id: "b"
-          }
-      ];
+      let questionsArr = Mock.mockQuestionList;
 
       return (
       <div className="App">
-            <QuestionGrid questionList={questionsArr} size={6}/>
+            <QuestionGrid questionList={questionsArr} size={8}/>
       </div>
     );
   }
