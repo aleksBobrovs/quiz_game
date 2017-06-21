@@ -10,7 +10,7 @@ class QuestionGrid extends Component {
 
     printQuestions(questionList) {
         return questionList.map((q) => (
-            <div className="question-front" key={q.id}><QuestionBack question={q}/></div>));
+            <div className="question-back" key={q.id}><QuestionBack question={q}/></div>));
     }
 
     render() {

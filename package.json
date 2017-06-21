@@ -12,8 +12,12 @@
     "babel-jest": "^20.0.3",
     "electron": "^1.6.10",
     "enzyme": "^2.8.2",
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-redux": "^5.0.5",
     "react-scripts": "1.0.7",
-    "react-test-renderer": "^15.5.4"
+    "react-test-renderer": "^15.5.4",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   },
   "main": "src/electron-starter.js",
   "scripts": {

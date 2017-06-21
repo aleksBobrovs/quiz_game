@@ -10,7 +10,7 @@ class App extends Component {
 
       return (
       <div className="App">
-            <QuestionGrid questionList={questionsArr} size={8}/>
+            <QuestionGrid questionList={questionsArr} size={6}/>
       </div>
     );
   }
